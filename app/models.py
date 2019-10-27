@@ -49,7 +49,7 @@ class Post(db.Model):
     title = db.Column(db.String(255), index = True)
     body = db.Column(db.String(255), index = True)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     comments = db.relationship('Comments', backref = 'post')
     
     def save_post(self):
