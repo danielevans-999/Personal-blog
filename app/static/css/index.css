@@ -1,20 +1,8 @@
 body{
 
     font-family: 'Dosis', sans-serif;
+    overflow-x: hidden;
 }
 
-#container-one{
 
-    max-height: 500px;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJh5b9ivdlcV4X3t9hwl9u0x27KMcAs-YrKVCpxqlMTd8m4FeW&s');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: black;
-    opacity: 0.7;
-    color:blue;
-}
 
-.home{
-    padding: 50px;
-}

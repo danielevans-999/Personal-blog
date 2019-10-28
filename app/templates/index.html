@@ -1,14 +1,45 @@
-{% extends 'base.html'%}
-
-
-
+{% extends 'base.html' %}
+{% import 'macros.html'  as macro%}
 
 {% block content %}
-
-<div class="container-fliud" id="container-one">
-    <div class="home">
-        <h4 class="text-center ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolore enim magni reprehenderit.</h4>
+<div class="container-fluid" id="one"
+    style=" color: white; padding: 50px; background: url('static/image/blog3.jpeg'); height: 400px; background-size: cover; ">
+    <h4 class="page-header">BLOGGER</h4>
+</div>
+<br>
+<div class="continer">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            </di<div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="static/image/einstein.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <figcaption><h5 class="card-title fa-quote-right">-Albert Einstein</h5></figcaption>
+                <p class="card-text blockquote">Everybody is a genius,But if you judge a fish by its ability to climb a tree it will leave all it's life believing it is stupid</p>
+                <a href="" class="btn btn-sm btn btn-outline-info">more</a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            </di<div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-sm btn-outline-info">Go somewhere</a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            </di<div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-outline-info btn-sm">Go somewhere</a>
+            </div>
+        </div>
     </div>
 </div>
+<hr>
 
-{%endblock%}
+{% endblock %}
