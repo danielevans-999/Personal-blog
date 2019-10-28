@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% import 'macros.html'  as macro%}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% if posts %}
+
+        {{ macro.displayBlog(posts)}}
+
+        {% else %}
+
+        <div class="card">
+            <h4 class="text-center">No pitches yet </h4>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock  %}
