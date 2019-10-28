@@ -2,14 +2,14 @@ from .import db
 from werkzeug.security import generate_password_hash,check_password_hash
 from datetime import datetime
 
-class Blog:
+# class Blog:
     
-    def __init__(self,id,author,quote,permalink):
+#     def __init__(self,id,author,quote,permalink):
         
-        self.id=id
-        self.author = author
-        self.quote = quote
-        self.permalink = permalink
+#         self.id=id
+#         self.author = author
+#         self.quote = quote
+#         self.permalink = permalink
         
 
 class User(db.Model):
@@ -22,7 +22,7 @@ class User(db.Model):
     password_hash=db.Column(db.String(255))
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
-    posts =  db.relationship('Pitch', backref = 'user', lazy = "dynamic")
+    posts =  db.relationship('Post', backref = 'user', lazy = "dynamic")
     Comments = db.relationship('Comment', backref = 'user', lazy = "dynamic")
     
     @property
@@ -50,7 +50,7 @@ class Post(db.Model):
     body = db.Column(db.String(255), index = True)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    comments = db.relationship('Comments', backref = 'post')
+    comments = db.relationship('Comment', backref = 'post')
     
     def save_post(self):
         db.session.add(self)
