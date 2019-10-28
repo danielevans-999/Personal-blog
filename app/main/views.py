@@ -36,4 +36,7 @@ def new_blog():
     
     title='blogs'
     return render_template('new_blog.html',title=title,blog_form=form)
+
+@main.route('/comments/new', methods=["GET","POST"])
+
     
