@@ -16,7 +16,7 @@
                 <a class="nav-link active" href="{{url_for('main.blogs')}}">Blogs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#">Add</a>
+                <a class="nav-link active" href="{{url_for('main.new_blog')}}">Add</a>
             </li>
 
             <li class="nav-item">
@@ -30,8 +30,8 @@
         <ul class="navbar-nav ml-5">
             {% if current_user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link"
-                    href="{{url_for('main.profile,uname=current_user.username')}}">{{current_user.username}}</a>
+                <a class="nav-link">
+                    </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{url_for('auth.logout')}}">Sign out</a>
@@ -39,7 +39,7 @@
             {% else %}
 
             <li class="nav-item">
-                <a class="nav-link" href="{{url_for('auth.login')}}">Login in</a>
+                <a class="nav-link" href="{{url_for('auth.login')}}">Login</a>
             </li>
             {% endif %}
         </ul>
