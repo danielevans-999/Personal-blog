@@ -1,4 +1,4 @@
-import requests
+import urllib.request,json
 
 base_url = None
 
@@ -11,7 +11,10 @@ def get_random_quote():
     '''
     Function that gets the response to our url request
     '''
-    
-    quote_data = requests.get(base_url)
-    
-    return quote_data
+    with urllib.request.urlopen(base_url) as url:
+        
+        quote_data = url.read()
+        quote_response = json.loads(quote_data)
+        print(quote_data)
+        
+    return quote_response
