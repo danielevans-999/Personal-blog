@@ -15,7 +15,7 @@ def index():
 
 @main.route('/blogs')
 def blogs():
-    posts = Post.query.all()
+    posts = Post.query.order_by(Post.timestamp.desc()).all()
     
     return render_template('blogs.html',posts=posts)
     
@@ -53,7 +53,7 @@ def comment(id):
         new_comment = Comment(post_id = post.id, comment_post=comment,user=current_user)
         new_comment.save_comments()
         
-        return redirect(url_for('.comments'))
+        return redirect(url_for('main.comments', id=post.id))
     
     return render_template('new_comment.html',comment_form=form,post=post)
 
@@ -63,6 +63,7 @@ def comments(id):
     post = Post.query.get(id)
     comment = Comment.get_comments(post.id)
     return render_template('comments.html', comment = comment,post=post)
+    print(comments)
 
 @main.route('/user/<uname>')
 def profile(uname):
