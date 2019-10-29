@@ -16,9 +16,9 @@ This is a website allows a user to login after registration and is able to write
 
 ## Installing 
 
-To view the application go to [click here]( https://dantepitchs.herokuapp.com/ )
+To view the application go to [click here](  https://danteblog.herokuapp.com/)
 
-- Step 1: Clone this repo :git clone (https://github.com/danielevans-999/Pitches-web)
+- Step 1: Clone this repo :git clone (https://github.com/danielevans-999/Personal-blog)
 
 - step 2: Open the repo using your text editor e.g atom or vscode
 
